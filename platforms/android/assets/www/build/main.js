@@ -77685,7 +77685,7 @@ var MyApp = (function () {
             // Here you can do any higher level native things you might need.
             statusBar.styleDefault();
             splashScreen.hide();
-            webService.basepath = 'http://dev.hobbynetworking.com';
+            // webService.basepath = 'http://dev.hobbynetworking.com';
         });
         // console.log(platform.platforms());
     }
