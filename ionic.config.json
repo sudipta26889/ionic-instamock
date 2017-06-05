@@ -4,8 +4,8 @@
   	"type": "ionic-angular",
   	"proxies": [
 	    {
-	      "path": "/external",
+	      "path": "*/external",
 		  "proxyUrl": "http://localhost/hobby/public/external"
 	    }  
-	 ]
+	]
 }

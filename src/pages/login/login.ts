@@ -3,7 +3,7 @@ import { App, IonicPage, NavController, NavParams, Platform } from 'ionic-angula
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { TabsPage } from '../tabs/tabs';
 import { SingletonProvider } from '../../providers/singleton/singleton';
-import { LoginService } from '../../services/webservice';
+import { WebService } from '../../services/webservice';
 import { Toast } from '@ionic-native/toast';
 
 declare var window: any;
@@ -17,12 +17,12 @@ declare var window: any;
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
-  providers: [LoginService]
+  providers: [WebService]
 })
 export class LoginPage {
   private login_form : FormGroup;
   public app;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder, public appp: App, public singleton:SingletonProvider, private loginService: LoginService, private platform: Platform, private toast: Toast) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private formBuilder: FormBuilder, public appp: App, public singleton:SingletonProvider, private loginService: WebService, private platform: Platform, private toast: Toast) {
   	this.app = appp;
     this.login_form = this.formBuilder.group({
       username: ['', Validators.required],

@@ -4105,6 +4105,7 @@ body {
 
 page-login .fixed-content {
   background: url(../assets/images/hbg.jpg) 100% 100%;
+  background-size: cover;
 }
 
 ul.loginLinks li {
@@ -4126,7 +4127,7 @@ ul.loginLinks li:last-child {
 .loginForm {
   position: absolute;
   width: 100%;
-  margin-top: 340px;
+  margin-top: 84%;
 }
 
 .clogo {
@@ -4135,7 +4136,7 @@ ul.loginLinks li:last-child {
   margin: 0 auto;
   text-align: center;
   width: 100%;
-  margin-top: 80px;
+  margin-top: 20%;
 }
 
 .clogo h1 {

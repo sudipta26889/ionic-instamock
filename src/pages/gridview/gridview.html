@@ -15,9 +15,9 @@
  <div class="container">
    <h2 class="pagetitle">{{ gridTitle }}</h2>
    <ul class="imagegridlist">
-     <li *ngFor="let image of images_list"><a href="#"> <ion-img [width]="200" [height]="174" src="{{ image }}"></ion-img> </a></li>
+    <li *ngFor="let image of images_list">
+      <a href="#"><img [src]="image" [width]="200" [height]="174"/></a>
+    </li>
    </ul>
-
-
  </div><!--container ends-->
 </ion-content>

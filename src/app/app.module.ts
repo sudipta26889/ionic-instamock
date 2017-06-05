@@ -15,7 +15,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SingletonProvider } from '../providers/singleton/singleton';
 import { HttpModule } from '@angular/http';
-import { LoginService, HomeService } from '../services/webservice';
+import { WebService } from '../services/webservice';
 import { Camera } from '@ionic-native/camera';
 import { Toast } from '@ionic-native/toast';
 
@@ -50,10 +50,9 @@ import { Toast } from '@ionic-native/toast';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     SingletonProvider,
-    LoginService,
+    WebService,
     Camera,
-    Toast,
-    HomeService
+    Toast
   ]
 })
 export class AppModule {}

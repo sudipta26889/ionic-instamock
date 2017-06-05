@@ -14,7 +14,7 @@
     <div class="trendingList">
       <ul class="trendingItems">
         <li *ngFor="let image of image_group.trendingItems">
-          <a href="#"> <ion-img [width]="200" [height]="174" src="{{ image }}"></ion-img> </a>
+          <a href="#"><img [src]="image" [width]="200" [height]="174"/></a>
         </li>
       </ul>
     </div>

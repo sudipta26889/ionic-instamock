@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
+import { WebService } from '../../services/webservice';
+import { Toast } from '@ionic-native/toast';
 /**
  * Generated class for the GridviewPage page.
  *
@@ -11,29 +12,33 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-gridview',
   templateUrl: 'gridview.html',
+  providers: [WebService]
 })
 export class GridviewPage {
   user;
   type;
   public gridTitle;
   public images_list;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private gridService: WebService, private platform: Platform, private toast: Toast) {
     this.type = navParams.get('type');
     this.user = navParams.get('user');
     console.log(this.user);
     this.gridTitle = this.type+" Image Grid";
-    this.images_list = [
-      'assets/images/1.jpg',
-      'assets/images/1.jpg',
-      'assets/images/1.jpg',
-      'assets/images/1.jpg',
-      'assets/images/1.jpg',
-      'assets/images/1.jpg',
-      'assets/images/1.jpg',
-      'assets/images/1.jpg',
-      'assets/images/1.jpg',
-      'assets/images/1.jpg'
-    ];
+    this.gridService.grid(this.user, this.type).subscribe(
+        data => {
+            // console.log(data);
+            if (data.success) {
+              this.images_list = data.images_list;
+            }else{
+              this.showToast('Problem in connecting to server.', 'bottom');
+            }
+        },
+        err => {
+            this.showToast('Please connect to internet.', 'bottom');
+            console.log(err);
+        },
+        () => console.log('Grid API Called Complete')
+    );
   }
 
   ionViewDidLoad() {
@@ -41,5 +46,17 @@ export class GridviewPage {
   }
   goBack(){
     this.navCtrl.pop();
+  }
+
+  showToast(message, position) {
+    if (!this.platform.is('core')) {
+      this.toast.show(message, '5000', position).subscribe(
+        toast => {
+          console.log(toast);
+        }
+      );
+    } else {
+      console.info("It will show \'"+message+"\' message as toast in device.");
+    }
   }
 }

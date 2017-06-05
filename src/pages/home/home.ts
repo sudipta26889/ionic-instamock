@@ -1,19 +1,19 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
 import { GridviewPage } from '../gridview/gridview';
-import { HomeService } from '../../services/webservice';
+import { WebService } from '../../services/webservice';
 import { Toast } from '@ionic-native/toast';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  providers: [HomeService]
+  providers: [WebService]
 })
 export class HomePage {
   user;
   public bg_image = "assets/images/hbg.jpg";
   public images_group_list;
-  constructor(public navCtrl: NavController, private navParams: NavParams, private homeService: HomeService, private platform: Platform, private toast: Toast) {
+  constructor(public navCtrl: NavController, private navParams: NavParams, private homeService: WebService, private platform: Platform, private toast: Toast) {
   	this.user = navParams.get('user');
   	// console.log(this.user);
     this.homeService.home(this.user).subscribe(
@@ -29,7 +29,7 @@ export class HomePage {
             this.showToast('Please connect to internet.', 'bottom');
             console.log(err);
         },
-        () => console.log('Login API Called Complete')
+        () => console.log('Home API Called Complete')
     );
   }
   showGrid(type) {
