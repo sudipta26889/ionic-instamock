@@ -30,7 +30,7 @@ export class GridviewPage {
             if (data.success) {
               this.images_list = data.images_list;
             }else{
-              this.showToast('Problem in connecting to server.', 'bottom');
+              this.showToast(data.msg, 'bottom');
             }
         },
         err => {

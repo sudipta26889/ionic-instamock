@@ -5,7 +5,7 @@
   	"proxies": [
 	    {
 	      "path": "*/external",
-		  "proxyUrl": "http://localhost/hobby/public/external"
+		  "proxyUrl": "http://dev.hobbynetworking.com/external"
 	    }  
 	]
 }

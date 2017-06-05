@@ -22,7 +22,7 @@ export class HomePage {
             if (data.success) {
               this.images_group_list = data.images_group_list;
             }else{
-              this.showToast('Problem in connecting to server.', 'bottom');
+              this.showToast(data.msg, 'bottom');
             }
         },
         err => {

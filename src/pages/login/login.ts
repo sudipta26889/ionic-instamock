@@ -45,7 +45,7 @@ export class LoginPage {
               var usersEmail = data.user.email;
               this.navCtrl.push(TabsPage,{ user: usersName});
             }else{
-              this.showToast('Invalid Username Or Password', 'bottom');
+              this.showToast(data.msg, 'bottom');
             }
         },
         err => {

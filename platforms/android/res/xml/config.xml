@@ -19,6 +19,9 @@
         <param name="android-package" value="io.ionic.keyboard.IonicKeyboard" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Toast">
+        <param name="android-package" value="nl.xservices.plugins.Toast" />
+    </feature>
     <name>InstaMock</name>
     <description>An Instamock app.</description>
     <author email="sudiptai26.889@gmail.com" href="http://ionicframework.com/">Sudipta Dhara</author>
