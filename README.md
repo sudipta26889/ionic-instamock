@@ -24,7 +24,10 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+Quick Command by Sudipta Dhara
+```bash
 ionic cordova resources
 ionic cordova build android --device
 ionic serve
 ionic cordova emulate android
+```
