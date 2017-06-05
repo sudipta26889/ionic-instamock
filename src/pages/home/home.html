@@ -1,0 +1,24 @@
+<ion-header class="header">
+  <ion-navbar>
+    <ion-title>Mockgram</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+   <div class="bannerContainer"><img src="{{ bg_image }}"/></div>
+  
+  <div *ngFor="let image_group of images_group_list">
+    <div class="trendingHead"><h3>{{ image_group.label }}</h3><a (click)="showGrid(image_group.title)">See All</a></div>
+    <div class="clear"></div>
+    <div class="trendingList">
+      <ul class="trendingItems">
+        <li *ngFor="let image of image_group.trendingItems">
+          <a href="#"> <ion-img [width]="200" [height]="174" src="{{ image }}"></ion-img> </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+ </div><!--container ends-->
+</ion-content>

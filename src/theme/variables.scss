@@ -1,0 +1,204 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+$font-path: "../assets/fonts";
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+$toolbar-background: transparent;
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+
+
+// Custom CSS
+@charset "utf-8";
+
+
+* { margin: 0; padding: 0; border: 0; -moz-transition: all 0.3s;-webkit-transition: all 0.3s; transition: all 0.3s;}
+
+a { color:#000; text-decoration:none;  }
+a:hover { text-decoration:none; color:#ee552a;}
+li { list-style:none; }
+p { line-height:22px; padding:0 0 1.3em; }
+img {
+	border:none;
+}
+a img {
+	border:none;
+}
+ul{list-style:none; margin:0; padding:0;}
+h1,h2,h3,h4,h5,h6{margin:0; padding:0;  }
+/* Forms */
+form          { display:inline; }
+fieldset      { border:0; }
+legend        { display:none; }
+
+/* Table */
+table         { border:0; /*border-collapse:collapse;*/ border-spacing:0; empty-cells:show; font-size:100%; }
+caption,th,td { vertical-align:top; text-align:left; font-weight:normal; }
+
+/* Content */
+p             { margin:0 0 10px; }
+strong        { font-weight:bold; }
+address       { font-style:normal; line-height:1.35; }
+cite          { font-style:normal; }
+q,
+blockquote    { quotes:none; }
+q:before,
+q:after       { content:''; }
+small,big     { font-size:1em; }
+/*sup           { font-size:1em; vertical-align:top; }*/
+
+/* Lists */
+
+ul,ol         { list-style:none; font-size: 12px; -webkit-margin-before: 0;-webkit-margin-after: 0;-webkit-margin-start: 0px;-webkit-margin-end: 0px;-webkit-padding-start: 0; margin-left:0px;}
+
+/* Tools */
+.hidden       { display:block !important; border:0 !important; margin:0 !important; padding:0 !important; font-size:0 !important; line-height:0 !important; width:0 !important; height:0 !important; overflow:hidden !important; }
+.nobr         { white-space:nowrap !important; }
+.wrap         { white-space:normal !important; }
+.a-left       { text-align:left !important; }
+.a-center     { text-align:center !important; }
+.a-right      { text-align:right !important; }
+.v-top        { vertical-align:top; }
+.v-middle     { vertical-align:middle; }
+.f-left,
+.left         { float:left !important; }
+.f-right,
+.right        { float:right !important; }
+.f-none       { float:none !important; }
+.f-fix        { float:left; width:100%; }
+.no-display   { display:none; }
+.no-margin    { margin:0 !important; }
+.no-padding   { padding:0 !important; }
+.no-bg        { background:none !important; }
+.clear{clear:both; display:block;}
+.clear40{clear:both; height:40px; display:block;}
+.clear20{clear:both; height:20px; display:block;}
+
+/* ======================================================================================= */
+
+
+
+
+
+
+
+
+body { 
+  font-size:14px;
+  color:#242424; overflow-x:hidden;
+}
+
+
+ .wrapper{position:relative;}
+ .header{background:#0e7cc9; color:#fff; text-align:left; font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; padding:2%;}
+ .container{width:100%; padding-bottom:80px;}
+ .imagegridlist{width:100%; }
+ .imagegridlist li{display:inline-block; width:32%; margin:0.5%;}
+ .imagegridlist li img{width:100%;}
+ .container h2.pagetitle{width:100%;text-align:center; font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; padding:10px 0px; border-bottom:1px solid #ebebeb;}
+  .footer{width:640px; background:#0e7cc9; font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; position:fixed; bottom:0; left:0;}
+   .footer ul.ftlinks{}
+      .footer ul.ftlinks li{display:inline-block; width:32%; text-align:center; padding:10px 0px;}
+.footer ul.ftlinks li a{display:block; text-align:center;}
+page-login .fixed-content{background: url(../assets/images/hbg.jpg) 100% 100%;}
+ul.loginLinks li{display:inline-block; width:50%; text-align:center; padding:10px 0px; border-right:1px solid #fff;}
+ul.loginLinks li:last-child{border:none;}
+.loginScreen .bodyBG img{width:100%;}
+.loginForm{position:absolute; width:100%; margin-top:340px;}
+.clogo{text-align:center; position:absolute; margin:0 auto; text-align:center; width:100%; margin-top:80px;}
+.clogo h1 {
+    width: 200px;
+    height: 200px;
+    background: #0e7cc9;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+.loginForm input[type="text"]{ width: 100%;   background: none;  border:none; font-size: 16px;  text-align:center; color: #fff; padding:10px 0px;}
+.loginForm input[type="password"]{ width: 100%;   background: none;  border:none; font-size: 16px;  text-align:center; color: #fff; padding:10px 0px;}
+
+.loginForm input[type="submit"]{width: 100%;   background: #0e7cc9;  border:none; font-size: 18px;  text-align:center; color: #fff; padding:20px;}
+.bannerContainer{ width: 100%;clear:both; display:block; height:200px; overflow:hidden;}
+.bannerContainer img{ width: 100%;}
+.clear{clear:both; display:block;}
+.trendingHead{clear:both; display:block; padding:20px 0px 40px;}
+.trendingHead h3{color:#999; float:left; width:50%; text-align:left;}
+.trendingHead a{color:#0e7cc9; float:right; width:50%; text-align:right; display:block;}
+
+.trendingList{width:100%;}
+.trendingList ul.trendingItems{}
+.trendingList ul.trendingItems li{display:inline-block; padding-right: 3px;}
+.transparent{background-color: transparent !important;}

@@ -1,0 +1,11 @@
+{
+  	"name": "instamock",
+  	"app_id": "",
+  	"type": "ionic-angular",
+  	"proxies": [
+	    {
+	      "path": "/external",
+		  "proxyUrl": "http://localhost/hobby/public/external"
+	    }  
+	 ]
+}
